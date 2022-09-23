@@ -15,10 +15,15 @@ public class Solution {
     	  BitSet B1 = new BitSet(N);
           BitSet B2 = new BitSet(N);
           for(int i=0;i<N; i++) {
-        	  B1.set(0);
+        	  B1.set(1);
+        	 
+      B2.set(0);
         	  
         	  
           }
+          System.out.println("bs1  : " + B1);
+          
+          int yu= yu | N;
           System.out.println("bs1  : " + B1);
           System.out.println("bs2  : " + B2);
     	
