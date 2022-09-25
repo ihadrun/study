@@ -15,17 +15,14 @@ public class Solution {
     	  BitSet B1 = new BitSet(N);
           BitSet B2 = new BitSet(N);
           for(int i=0;i<N; i++) {
-        	  B1.set(1);
-        	 
-      B2.set(0);
-        	  
-        	//hello adding a line  
-          }
+              B1.set(i);
+        }
           System.out.println("bs1  : " + B1);
+        B1.set(0, 2);
           
-          int yu= yu | N;
+      
           System.out.println("bs1  : " + B1);
-          System.out.println("bs2  : " + B2);
+          System.out.println(B1.cardinality());
     	
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
     }
