@@ -1,45 +1,47 @@
-package bitset;
+
 
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
 public class Solution {
 
     public static void main(String[] args) {
-    	
-    	Scanner sc = new Scanner(System.in);
-    	int N = sc.nextInt();
-    	int M = sc.nextInt();
-    	  BitSet B1 = new BitSet(N);
-          BitSet B2 = new BitSet(N);
+        
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        int M = sc.nextInt();
+        
+         BitSet B1 = new BitSet(N);
+         BitSet B2 = new BitSet(N);
+         
+         for(int i=0;i<M;i++) {
          String s = sc.next();
-          for(int i=0;i<M; i++) {
-        	  switch(s) {
-        	  case "AND":
-        		  B1.and(B2);
-        	    // code block
-        	    break;
-        	  case "OR":
-        		  B1.or(B2);
-        	  case "FLIP":
-        		  B1.flip(bitIndex);
-        	    // code block
-        	    break;
-        	  default:
-        	    // code block
-        	}
-              B1.set(i);
-        }
-          System.out.println("bs1  : " + B1);
-        B1.set(0, 2);
+         int w =sc.nextInt();
+         int q= sc.nextInt();
+         
+        switch(s) {
+       case "AND":
+          if(w==1) {
+          B1.and(B2);
           
-      
-          System.out.println("bs1  : " + B1);
-          System.out.println(B1.cardinality());
-    	
-        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+    }
+          else  B2.and(B1);break;
+    case "OR":
+        if(w==1) B1.or(B2);
+        else B2.or(B1);break;
+        case "FLIP":if(w==1)B1.flip(q);
+       else B2.flip(q);break;
+        case "SET":
+            if(w==1)B1.set(q);else B2.set(q);break;
+         case "XOR":
+             if(w==1) B1.xor(B2);
+             else B2.xor(B1);break;}
+        
+         
+       System.out.println(B1.cardinality()+" "+B2.cardinality());
+         }
+         
     }
 }
