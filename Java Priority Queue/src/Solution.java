@@ -14,8 +14,15 @@ this.cgpa=cgpa;this.id=id; }
 
 	@Override
 	public int compareTo(Student o) {
+		if(cgpa<o.cgpa) return -1;
+		else if(cgpa>o.cgpa) return 1;
+		
+		
 		// TODO Auto-generated method stub
 		return 0;
+	}
+	public  Priorities() {
+		return 1;
 	}
 	
 }
