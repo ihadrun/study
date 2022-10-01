@@ -11,7 +11,6 @@ this.name= name;
 this.cgpa=cgpa;this.id=id; }
 
 
-
 	@Override
 	public int compareTo(Student o) {
 		if(cgpa<o.cgpa) return -1;
@@ -20,8 +19,35 @@ this.cgpa=cgpa;this.id=id; }
 		
 		// TODO Auto-generated method stub
 		return 0;
+		public int getID() {
+			try {
+				return this.id;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+		public String getName() {
+			try {
+				return this.name;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		public double getCGPA() {
+			try {
+				return this.cgpa;
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
-	public  Priorities() {
+	public class Priorities() {
+		
+		
 		return 1;
 	}
 	
