@@ -10,46 +10,21 @@ public Student(String name, double cgpa, int id) {
 this.name= name;
 this.cgpa=cgpa;this.id=id; }
 
+public int compareTo(Student st) {  
+    if(id>st.id){  
+        return 1;  
+    }else if(id<st.id){  
+        return -1;  
+    }else{  
+    return 0;  
+    }  
+}
 
-	@Override
-	public int compareTo(Student o) {
-		if(cgpa<o.cgpa) return -1;
-		else if(cgpa>o.cgpa) return 1;
-		
-		
-		// TODO Auto-generated method stub
-		return 0;
-		public int getID() {
-			try {
-				return this.id;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		
-		public String getName() {
-			try {
-				return this.name;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-		public double getCGPA() {
-			try {
-				return this.cgpa;
-			} catch (Exception e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
-	}
-	public class Priorities() {
-		
-		//azaghiafjalkdsjfal
-		return 1;
-	}
+public char[] getName() {
+	// TODO Auto-generated method stub
+	return ;
+}  
+	
 	
 }
 /*
