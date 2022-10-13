@@ -10,13 +10,13 @@ private double cgpa;
 private String name;
 private int id;
 public Student(String name, double cgpa, int id) {
-this.name= name;
-this.cgpa=cgpa;this.setId(id); }
+this.setName(name);
+this.setCgpa(cgpa);this.setId(id); }
 
 public int compareTo(Student st) {  
-    if(getId()>st.getId()){  
+    if(getCgpa()>st.getCgpa()){  
         return 1;  
-    }else if(getId()<st.getId()){  
+    }else if(getCgpa()<st.getCgpa()){  
         return -1;  
     }else{  
     return 0;  
@@ -31,6 +31,24 @@ public void setId(int id) {
 	this.id = id;
 }
 
+public String getName() {
+	return name;
+}
+
+public void setName(String name) {
+	this.name = name;
+}
+
+public double getCgpa() {
+	return cgpa;
+}
+
+public void setCgpa(double cgpa) {
+	this.cgpa = cgpa;
+}
+
+
+
 
 	
 	
@@ -41,17 +59,35 @@ public class Solution {
  public static void main(String[] args) {
 	 Queue<Student> queue=new PriorityQueue<Student>();  
         Scanner s = new Scanner(System.in);
-        Student st1=new Student("Yashwant Kanetkar",542,8);  
-        Student st3=new Student("Yashwafnt Kanetkar",5452,86);  
-        Student st2=new Student("Yashwant Kanetkar",5342,84);  
+        int t = s.nextInt();
         
-        queue.add(st1);  
-        queue.add(st3);  
-        queue.add(st2);  
+        for (int i = 0; i< t; i++) {
+        	String f= s.next();
+        	if(f.equals("ENTER"))
+        	{
+        		 Student st=new Student(s.next(),s.nextDouble(), s.nextInt()); 
+        		 queue.add(st);  
+        	}
+        	else if(f.equals("SERVED")) {
+        		queue.remove();
+        		
+        	}
+        	
+        }
+      
+        
+      
+       
+        
         System.out.println("Traversing the queue elements:");  
         for(Student st:queue){  
-            System.out.println(st.getId());  
+            System.out.println(st.getName());  
             }  
+        
+        System.out.println("Treaversing the queue elements:");  
+        for(Student st:queue){  
+            System.out.println(st.getCgpa());  
+            } 
         
 
 
