@@ -18,7 +18,17 @@ public int compareTo(Student st) {
         return 1;  
     }else if(getCgpa()<st.getCgpa()){  
         return -1;  
+    }
+    else if(getCgpa()==st.getCgpa()) {
+    	if(getName().compareTo(st.getName())) {
+    		System.out.println("aloha");
+    		return 1;
+    	}
+    		
     }else{  
+    	
+    }
+    	
     return 0;  
     }  
 }
