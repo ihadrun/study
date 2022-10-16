@@ -20,7 +20,7 @@ public int compareTo(Student st) {
         return -1;  
     }
     else if(getCgpa()==st.getCgpa()) {
-    	if(getName().compareTo(st.getName())) {
+    	if(getName().equals(st.getName())) {
     		System.out.println("aloha");
     		return 1;
     	}
@@ -31,7 +31,7 @@ public int compareTo(Student st) {
     	
     return 0;  
     }  
-}
+
 
 public int getId() {
 	return id;
