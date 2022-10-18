@@ -14,18 +14,26 @@ this.setName(name);
 this.setCgpa(cgpa);this.setId(id); }
 
 public int compareTo(Student st) {  
-    if(getCgpa()>st.getCgpa()){  
+    if(getCgpa()<st.getCgpa()){  
         return 1;  
-    }else if(getCgpa()<st.getCgpa()){  
+    }else if(getCgpa()>st.getCgpa()){  
         return -1;  
     }
     else if(getCgpa()==st.getCgpa()) {
-    	if(getName().equals(st.getName())) {
+    	System.out.println("aloh3a");
+    	if(getName().compareTo(st.getName())>0) {
     		System.out.println("aloha");
     		return 1;
     	}
+    	else if(getName().compareTo(st.getName())<0){  
+            return -1;  }
+    	else if(getName().equals(st.getName())){ 
     		
-    }else{  
+    		System.out.println("poppy");
+    }
+    	else{  
+    	
+    }
     	
     }
     	
@@ -79,7 +87,8 @@ public class Solution {
         		 queue.add(st);  
         	}
         	else if(f.equals("SERVED")) {
-        		queue.remove();
+        	
+        		queue.poll();
         		
         	}
         	
@@ -92,16 +101,13 @@ public class Solution {
         System.out.println("Traversing the queue elements:");  
         for(Student st:queue){  
             System.out.println(st.getName());  
+            
             }  
-        
+      
         System.out.println("Treaversing the queue elements:");  
         for(Student st:queue){  
             System.out.println(st.getCgpa());  
             } 
         
-
-
-//Write your code here
-
     }
 }
