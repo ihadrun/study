@@ -30,7 +30,7 @@ public class CreateInvoices extends CustomAction<Invoice>{
 
 		logDebug("----- Completed Creation of Invoice ----");
 
-		BigDecimal originalRate = new BigDecimal("23.00");
+		BigDecimal originalRate = new BigDecimal("234.00");
 		//the line item original quantity.
 		BigDecimal originalQuantity = new BigDecimal("500");
 		//the line item original discount.

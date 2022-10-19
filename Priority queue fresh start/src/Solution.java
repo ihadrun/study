@@ -28,8 +28,11 @@ public int compareTo(Student st) {
     	else if(getName().compareTo(st.getName())<0){  
             return -1;  }
     	else if(getName().equals(st.getName())){ 
-    		
-    		System.out.println("poppy");
+    		 if(getId()<st.getId()){  
+    		        return 1;  }
+    		 else if(getId()>st.getId()){  
+    		        return -1;  }
+    		    		System.out.println("poppy");
     }
     	else{  
     	
@@ -78,7 +81,7 @@ public class Solution {
 	 Queue<Student> queue=new PriorityQueue<Student>();  
         Scanner s = new Scanner(System.in);
         int t = s.nextInt();
-        
+        //still trying, line to edit often 
         for (int i = 0; i< t; i++) {
         	String f= s.next();
         	if(f.equals("ENTER"))
@@ -107,6 +110,7 @@ public class Solution {
         System.out.println("Treaversing the queue elements:");  
         for(Student st:queue){  
             System.out.println(st.getCgpa());  
+            System.out.println(st.getId());  
             } 
         
     }
