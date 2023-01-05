@@ -9,6 +9,7 @@ public class Sam2 extends ScheduledCustomAction{
 Contact cont=platform.getContactService().read((long) 1006);		
 
 cont.setTextFieldValue("POBOX","chennai");
+cont.se
 	}
 
 }
