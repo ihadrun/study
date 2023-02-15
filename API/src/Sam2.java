@@ -5,7 +5,7 @@ public class Sam2 extends ScheduledCustomAction{
 
 	@Override
 	public void action() {
-		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub try again
 Contact cont=platform.getContactService().read((long) 1006);		
 
 cont.setTextFieldValue("POBOX","chennai");
